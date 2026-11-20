@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lazy-Hanna L. Constantino | BSIT Student &amp; Aspiring QA Tester</title>
+  <meta name="description" content="Digital portfolio of Lazy-Hanna L. Constantino, BSIT student at STI College Alabang seeking a Work Immersion (OJT) in quality assurance." />
+  <meta property="og:title" content="Lazy-Hanna L. Constantino | Digital Portfolio" />
+  <meta property="og:description" content="BSIT student at STI College Alabang. Aspiring QA tester. Open for Work Immersion." />
+  <meta property="og:image" content="assets/photo.jpg" />
+  <meta name="theme-color" content="#b07a5f" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b07a5f'/%3E%3Ctext x='32' y='43' font-size='32' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='white'%3ELC%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Parisienne&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" aria-label="Home"><span class="brand-mark">LC</span><span class="brand-text">Lazy-Hanna</span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#hte">HTE Evaluation</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+        <li><a href="#plan">Career Plan</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="script" id="heroHello">Hello, I'm</p>
+          <h1 id="heroName"></h1>
+          <p class="typed-line"><span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+          <p class="tagline" id="heroTagline"></p>
+          <div class="btn-row">
+            <a class="btn primary" href="#resume">View my resume</a>
+            <a class="btn ghost" href="#hte">See my top 3 HTEs</a>
+            <a class="btn ghost" href="#contact">Contact me</a>
+          </div>
+          <ul class="stats" id="stats"></ul>
+        </div>
+        <div class="hero-photo">
+          <div class="arch"><img id="heroPhoto" alt="Professional portrait of Lazy-Hanna L. Constantino" width="900" height="900" /></div>
+          <div class="badge-float b1">Open for Work Immersion</div>
+          <div class="badge-float b2">STI College Alabang</div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- 1. PROFESSIONAL PROFILE -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow">01 · Professional Profile</p><h2>About me</h2></header>
+        <div class="about-grid">
+          <article class="card reveal">
+            <h3>Introduction <span class="todo" data-todo>Personalise</span></h3>
+            <p id="aboutIntro"></p>
+          </article>
+          <article class="card reveal">
+            <h3>Career objective</h3>
+            <p id="aboutObjective"></p>
+          </article>
+          <article class="card wide reveal">
+            <h3>My Work Immersion goals <span class="todo" data-todo>Check</span></h3>
+            <ul class="goals" id="goals"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RESUME -->
+    <section id="resume" class="section alt">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow">02 · Resume / Curriculum Vitae</p><h2>Resume</h2></header>
+        <div class="resume-grid reveal">
+          <aside class="card resume-side">
+            <h3>Personal information</h3>
+            <dl class="info" id="personalInfo"></dl>
+            <div class="btn-col">
+              <button class="btn primary" id="openResume">View resume</button>
+              <a class="btn ghost" id="downloadResume" download>Download PDF</a>
+            </div>
+          </aside>
+          <div class="card resume-main">
+            <div class="tabs" role="tablist" aria-label="Resume sections" id="resumeTabs"></div>
+            <div class="tab-panel" id="resumePanel" role="tabpanel" tabindex="0"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow">03 · Skills Showcase</p><h2>What I can do</h2>
+          <p class="lead">Select a skill to see where I have used it.</p></header>
+        <div class="filter-row reveal" id="skillFilters" role="group" aria-label="Filter skills"></div>
+        <div class="skills-layout reveal">
+          <div class="chips" id="skillChips"></div>
+          <div class="card skill-proof" id="skillProof" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ACADEMIC ACHIEVEMENTS -->
+    <section id="achievements" class="section alt">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow">04 · Academic Achievements</p><h2>Awards, trainings &amp; seminars</h2></header>
+        <div class="award-grid" id="awards"></div>
+        <h3 class="sub reveal">Certificates, seminars and workshops <span class="todo" data-todo>Add dates &amp; images</span></h3>
+        <div class="cert-grid" id="certs"></div>
+      </div>
+    </section>
+
+    <!-- 5. WORK SAMPLES -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow">05 · Work Samples &amp; Projects</p><h2>Selected work</h2>
+          <p class="lead">Quality over quantity: the outputs I am proudest of.</p></header>
+        <div class="filter-row reveal" id="projectFilters" role="group" aria-label="Filter projects"></div>
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <!-- 6. HTE -->
+    <section id="hte" class="section alt">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow">06 · Company &amp; HTE Evaluation</p><h2>My top 3 target companies</h2>
+          <p class="lead">I evaluated each company on six criteria. Open a company, then try the comparison tool below.</p></header>
+
+        <div class="company-tabs reveal" id="companyTabs" role="tablist" aria-label="Companies"></div>
+        <div class="card company-panel reveal" id="companyPanel" role="tabpanel" tabindex="0"></div>
+
+        <h3 class="sub reveal">Comparative analysis</h3>
+        <div class="card compare reveal">
+          <div class="table-scroll"><table class="cmp" id="cmpTable"></table></div>
+          <div class="weights">
+            <div class="weights-head">
+              <h4>What matters most to you? <span>Move a slider to re-rank the companies.</span></h4>
+              <button class="btn ghost small" id="resetWeights">Reset to equal weights</button>
+            </div>
+            <div class="weights-grid" id="weightsGrid"></div>
+          </div>
+          <div class="ranking" id="ranking" aria-live="polite"></div>
+        </div>
+
+        <div class="reco card reveal">
+          <p class="eyebrow">Final recommendation</p>
+          <h3 id="recoTitle">IBM Philippines</h3>
+          <p id="recoText"></p>
+        </div>
+
+        <h3 class="sub reveal">Guide questions</h3>
+        <div class="accordion reveal" id="guideQs"></div>
+
+        <details class="sources reveal">
+          <summary>Sources</summary>
+          <ul id="sourceList"></ul>
+        </details>
+      </div>
+    </section>
+
+    <!-- 7. REFLECTION -->
+    <section id="reflection" class="section">
+      <div class="wrap narrow">
+        <header class="sec-head reveal"><p class="eyebrow">07 · Reflection <span class="todo" data-todo>Rewrite in your voice</span></p>
+          <h2>How has preparing for Work Immersion helped me understand my career goals?</h2></header>
+        <div class="reflection reveal" id="reflectionText"></div>
+        <p class="wordcount" id="wordCount"></p>
+      </div>
+    </section>
+
+    <!-- BONUS: CAREER PLAN + VIDEO -->
+    <section id="plan" class="section alt">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow">Bonus · Career Development Plan</p><h2>Where I'm headed in 5 years <span class="todo" data-todo>Edit</span></h2></header>
+        <ol class="timeline" id="planTimeline"></ol>
+        <div class="video reveal" id="videoBox"></div>
+      </div>
+    </section>
+
+    <!-- 8. CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <header class="sec-head reveal"><p class="eyebrow">08 · Contact Information</p><h2>Let's work together</h2>
+          <p class="lead">I am looking for a Work Immersion opportunity in quality assurance and IT.</p></header>
+        <div class="contact-grid">
+          <div class="card contact-list reveal" id="contactList"></div>
+          <form class="card contact-form reveal" id="contactForm">
+            <h3>Send a message</h3>
+            <label>Your name<input name="name" required autocomplete="name" /></label>
+            <label>Your email<input name="email" type="email" required autocomplete="email" /></label>
+            <label>Message<textarea name="message" rows="4" required></textarea></label>
+            <button class="btn primary" type="submit">Open in my email app</button>
+            <p class="hint">This opens your email app with the message ready to send.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Lazy-Hanna L. Constantino · BS Information Technology · STI College Alabang</p>
+    <p class="small">Portrait and documents are my own. Company information is cited in the HTE sources list. Made for EUTHENICS 2 · Requirement 4: Digital Portfolio.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="modal" class="modal"><button class="modal-close" aria-label="Close" id="modalClose">×</button><div id="modalBody"></div></dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
